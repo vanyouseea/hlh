@@ -5,22 +5,20 @@ apt update
 apt install curl mlocate unzip zip gzip gunzip fuse
 
 2. 安装 SSR
-wget ssr.sh
-bash ssr.sh
+wget https://raw.githubusercontent.com/vanyouseea/hlh/master/ssr.sh && bash ssr.sh
 
 3. 安装 加速器
-wget tcp.sh
-bash tcp.sh
+wget https://raw.githubusercontent.com/vanyouseea/hlh/master/tcp.sh && bash tcp.sh
 
 4. 安装aria2
-wget aria2.sh
-bash aria2.sh
+wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash aria2.sh
 
 5. 将.aria2目录下的文件下载下来覆盖原来HOME目录的.aria2里面的文件，通过脚本重启aria2
 
 6. 下载tomcat7.zip 和 jdk8.zip
-将他们解压到/usr/local/下，tomcat7 已经集成了aria2 web， 
-在/etc/profile最后加上如下配置
+https://github.com/vanyouseea/hlh/raw/master/tomcat7.zip
+https://github.com/vanyouseea/hlh/raw/master/jdk8.zip
+将他们解压到/usr/local/下，tomcat7 已经集成了aria2 web，在/etc/profile最后加上如下配置
 export JAVA_HOME=/usr/local/java/jdk1.8.0_241
 
 export PATH=$JAVA_HOME/bin:$PATH
