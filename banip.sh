@@ -14,9 +14,10 @@ PORT=2222
 # 
 
 mkdir -p ~/$BanIPPath/
+cd ~/$BanIPPath/
 
 #get the top 500 IPs and discnt them
-lastb|head -500|awk -F' ' '{print $3}'|sort -n|grep ^[0-9]|uniq > ~/$BanIPPath/ips.txt
+lastb|head -500|awk -F' ' '{print $3}'|sort -n|grep ^[0-9]|uniq > ips.txt
 
 while read line
 do
@@ -27,15 +28,18 @@ do
 		then
 			#if no port defined ban IP
 			echo "echo ban the ip $line" >>~/$BanIPPath/rejectIPs.sh
-			echo "iptables -A INPUT -ptcp -s $line -j DROP;" >>~/$BanIPPath/rejectIPs.sh
+			echo "iptables -A INPUT -ptcp -s $line -j DROP;" >>rejectIPs.sh
 		else
 			#if there is port defined ban IP & port
-			echo "echo ban the ip $line to access our port: $PORT" >>~/$BanIPPath/rejectIPs.sh
-			echo "iptables -A INPUT -s $line -ptcp --dport $PORT -j DROP;" >>~/$BanIPPath/rejectIPs.sh
+			echo "echo ban the ip $line to access our port: $PORT" >>rejectIPs.sh
+			echo "iptables -A INPUT -s $line -ptcp --dport $PORT -j DROP;" >>rejectIPs.sh
 		fi
 	fi
 done<ips.txt
 
-chmod 755 ~/$BanIPPath/rejectIPs.sh
+if [ -f rejectIPs.sh ]
+then
+	chmod 755 rejectIPs.sh
+fi
 
 rm ips.txt
