@@ -1,8 +1,7 @@
 This is the VPS setting up setup for debian system.
 
 1. 安装所有必要的软件(如果未安装)
-apt update
-apt install curl mlocate unzip zip gzip gunzip fuse
+apt update && apt install curl mlocate unzip zip gzip gunzip fuse
 
 2. 安装 SSR
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/ssr.sh && bash ssr.sh
