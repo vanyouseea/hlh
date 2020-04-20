@@ -18,7 +18,13 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 
 https://github.com/vanyouseea/hlh/raw/master/tomcat7.zip
 
-https://github.com/vanyouseea/hlh/raw/master/jdk8.zip
+https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.001
+...
+https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.008
+
+合并zip, cat jdk8.zip* > jdk8.zip
+
+解压unzip jdk8.zip
 
 将他们解压到/usr/local/下，tomcat7 已经集成了aria2 web，在/etc/profile最后加上如下配置
 
