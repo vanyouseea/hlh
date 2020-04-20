@@ -22,13 +22,13 @@ https://github.com/vanyouseea/hlh/raw/master/tomcat7.zip
 https://github.com/vanyouseea/hlh/raw/master/jdk8.zip
 
 将他们解压到/usr/local/下，tomcat7 已经集成了aria2 web，在/etc/profile最后加上如下配置
-export JAVA_HOME=/usr/local/java/jdk1.8.0_241
+  export JAVA_HOME=/usr/local/java/jdk1.8.0_241
 
-export PATH=$JAVA_HOME/bin:$PATH
+  export PATH=$JAVA_HOME/bin:$PATH
 
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+  export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
 
-export JRE_HOME=$JAVA_HOME/jre
+  export JRE_HOME=$JAVA_HOME/jre
 
 7. 安装rclone(通过网页找最新的url)，之后将将.config目录下的文件下载下来覆盖原来HOME目录的.config里面的文件
 这样就完成了对于OD的挂载,以下的别名命令是挂载OD到VPS和启动关闭tomcat的快捷方式，配置到$HOME/.profile中
