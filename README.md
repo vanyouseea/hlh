@@ -51,11 +51,12 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 
 e5.sh         e5续订脚本，需要配合crontab一起使用
 包含的API调用包括
+
 1.列出邮件
 
 2.获取driveid
 
-3.获取od目录下的top5文件
+3.获取od某目录下的top5文件
 
 4.搜索od文件
 
