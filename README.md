@@ -53,3 +53,7 @@ e5.sh         e5续订脚本，需要配合crontab一起使用
 
 banIPs.sh     ban掉所有连接VPS失败的IP，可以选择ban port或者IP(特别注意别因为自己登录失败而ban了自己)
 
+e5study.txt   e5 resful API 学习文档
+
+soapui-e5.xml call e5 resful API via soapUI
+
