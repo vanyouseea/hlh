@@ -50,6 +50,20 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 =====================================可选=====================================
 
 e5.sh         e5续订脚本，需要配合crontab一起使用
+包含的API调用包括
+1.列出邮件
+
+2.获取driveid
+
+3.获取od目录下的top5文件
+
+4.搜索od文件
+
+5.上传文件到od
+
+6.以itemID的形式获取文件信息
+
+7.删除文件
 
 banIPs.sh     ban掉所有连接VPS失败的IP，可以选择ban port或者IP(特别注意别因为自己登录失败而ban了自己)
 
