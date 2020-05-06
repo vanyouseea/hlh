@@ -27,7 +27,7 @@ do
 		if [ "$PORT" = "" ]
 		then
 			#if no port defined ban IP
-			echo "echo ban the ip $line" >>~/$BanIPPath/rejectIPs.sh
+			echo "echo ban the ip $line" >>rejectIPs.sh
 			echo "iptables -A INPUT -ptcp -s $line -j DROP;" >>rejectIPs.sh
 		else
 			#if there is port defined ban IP & port
