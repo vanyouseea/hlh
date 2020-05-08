@@ -13,7 +13,10 @@ echo "[`date +%y-%m-%d` `date +%H:%M:%S`] Task $1:$2:$3 finished.">> ~/res.txt
 if [ "$3" != "" -a $2 -ne 0 ]
 then
 	files=`echo "$3"|awk -F'/' '{print $4}'`
-
+	
+	#SMS the download information to user
+	bash /root/mail/sendmail.sh "${files}下载完成"
+	
 	realPath=$downloadPath/"$files"
 	echo "[`date +%y-%m-%d` `date +%H:%M:%S`] Start to move "$realPath" to OneDrive.">> ~/res.txt
 
