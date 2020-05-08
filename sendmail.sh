@@ -9,7 +9,7 @@
 cd ~/mail
 
 json1='{"message": {"subject": "'
-json2='","body": {"contentType": "Text","content": "Attention!"},"toRecipients": [{"emailAddress": {"address": "13820231323@139.com"}}]}}'
+json2='","body": {"contentType": "Text","content": "Attention!"},"toRecipients": [{"emailAddress": {"address": "13520231323@139.com"}}]}}'
 
 #get accessToken
 echo "1.start to get accessToken"
