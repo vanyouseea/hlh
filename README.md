@@ -72,3 +72,9 @@ e5study.txt   e5 resful API 学习文档
 
 soapui-e5.xml call e5 resful API via soapUI
 
+![]注册应用
+https://login.microsoftonline.com/common/oauth2/v2.0/authorize?
+client_id=e381aebb-dbbf-4a6f-a9c2-34ebfbdf9424&response_type=code
+&scope=Files.ReadWrite.All%20Files.ReadWrite.AppFolder%20Files.ReadWrite.Selected%20Mail.ReadWrite%20Mail.Send%20offline_access%20Sites.Read.All%20User.Read
+&redirect_uri=http://localhost:12345
+
