@@ -1,30 +1,30 @@
 # This is the VPS setting up setup for debian system.
-
+![ABC GOOasla aadasldlasd](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ### 1. 安装所有必要的软件(如果未安装)
-apt update && apt install curl mlocate unzip zip gzip gunzip fuse
-
+```base
+apt update && apt install -y curl mlocate unzip zip gzip gunzip fuse
+```
 ### 2. 安装 SSR
+```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/ssr.sh && bash ssr.sh
-
+```
 ### 3. 安装 加速器
+```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/tcp.sh && bash tcp.sh
-
+```
 ### 4. 安装aria2
+```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash aria2.sh
-
+```
 ### 5. 将.aria2目录下的文件下载下来覆盖原来HOME目录的.aria2里面的文件，通过脚本重启aria2
 
 ### 6. 下载tomcat7.zip 和 jdk8.zip
-
-  https://github.com/vanyouseea/hlh/raw/master/tomcat7.zip
-
-  https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.001
-  
-  ...
-  
-  https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.008
-
 ```bash
+  wget https://github.com/vanyouseea/hlh/raw/master/tomcat7.zip
+  wget https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.001
+  ...
+  wget https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.008
+  
   #合并zip
   cat jdk8.zip* > jdk8.zip，
   #解压到/usr/local/下,tomcat7已经集成了aria2 web
