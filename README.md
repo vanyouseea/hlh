@@ -47,7 +47,7 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 ### 9. 大功告成
 
 --- 
-###可选
+# 可选
 
 ### e5.sh         e5续订脚本，需要配合crontab一起使用
 包含的API调用包括
@@ -66,12 +66,9 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 
 * 删除文件
 
-banIPs.sh     ban掉所有连接VPS失败的IP，可以选择ban port或者IP(特别注意别因为自己登录失败而ban了自己)
-
-e5study.txt   e5 resful API 学习文档
-
-soapui-e5.xml call e5 resful API via soapUI
-
+### banIPs.sh     ban掉所有连接VPS失败的IP，可以选择ban port或者IP(特别注意别因为自己登录失败而ban了自己)
+### e5study.txt   e5 resful API 学习文档
+### soapui-e5.xml call e5 resful API via soapUI
 ### 注册应用
 https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=e381aebb-dbbf-4a6f-a9c2-34ebfbdf9424&response_type=code&scope=Files.ReadWrite.All%20Files.ReadWrite.AppFolder%20Files.ReadWrite.Selected%20Mail.ReadWrite%20Mail.Send%20offline_access%20Sites.Read.All%20User.Read&redirect_uri=http://localhost:12345
 
