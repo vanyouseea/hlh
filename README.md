@@ -27,8 +27,8 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 ```bash
   #合并zip
   cat jdk8.zip* > jdk8.zip，
-  #解压unzip 到/usr/local/下,tomcat7 已经集成了aria2 web
-  jdk8.zip
+  #解压到/usr/local/下,tomcat7已经集成了aria2 web
+  unzip jdk8.zip
   #在/etc/profile最后加上如下配置
   export JAVA_HOME=/usr/local/java/jdk1.8.0_241
   export PATH=$JAVA_HOME/bin:$PATH
@@ -73,7 +73,6 @@ e5study.txt   e5 resful API 学习文档
 
 soapui-e5.xml call e5 resful API via soapUI
 
-注册应用
-
+### 注册应用
 https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=e381aebb-dbbf-4a6f-a9c2-34ebfbdf9424&response_type=code&scope=Files.ReadWrite.All%20Files.ReadWrite.AppFolder%20Files.ReadWrite.Selected%20Mail.ReadWrite%20Mail.Send%20offline_access%20Sites.Read.All%20User.Read&redirect_uri=http://localhost:12345
 
