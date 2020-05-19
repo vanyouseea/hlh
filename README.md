@@ -37,18 +37,17 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 ```
 ### 7. 安装rclone(通过网页找最新的url)，之后将将.config目录下的文件下载下来覆盖原来HOME目录的.config里面的文件
 这样就完成了对于OD的挂载,以下的别名命令是挂载OD到VPS和启动关闭tomcat的快捷方式，配置到$HOME/.profile中
-
+```bash
   alias od="nohup /usr/bin/rclone mount hqr:vps /onedrive --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 &"
-
   alias start="/usr/local/tomcat7/bin/startup.sh"
-
   alias stop="/usr/local/tomcat7/bin/shutdown.sh"
-
+```
 ### 8. 将upload.sh下载到$HOME/下，修改权限为755，这样aria2下载完成后自动上传文件到OD
 
 ### 9. 大功告成
 
-# ========可选=========
+--- 
+###可选
 
 ### e5.sh         e5续订脚本，需要配合crontab一起使用
 包含的API调用包括
