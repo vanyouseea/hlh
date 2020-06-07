@@ -6,7 +6,7 @@ apt update && apt install -y curl mlocate unzip zip gzip gunzip fuse
 ```
 ### 2. 安装 SSR
 ```base
-wget https://raw.githubusercontent.com/vanyouseea/hlh/master/ssr.sh && bash ssr.sh
+wget https://raw.githubusercontent.com/vanyouseea/hlh/master/shadowsocks-all.sh && bash shadowsocks-all.sh
 ```
 ### 3. 安装 加速器
 ```base
