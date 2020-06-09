@@ -2,7 +2,7 @@
 ![ABC GOOasla aadasldlasd](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ### 1. 安装所有必要的软件(如果未安装)
 ```base
-apt update && apt install -y curl mlocate unzip zip gzip gunzip fuse
+apt update && apt install -y curl mlocate unzip zip gzip fuse
 ```
 ### 2. 安装 SSR
 ```base
