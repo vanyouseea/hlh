@@ -27,7 +27,7 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
 ### 5. 将.aria2目录下的文件下载下来覆盖原来HOME目录的.aria2里面的文件，通过脚本重启aria2
 
 ### 6. 下载tomcat7.zip 和 jdk8.zip
-```bash
+```base
   wget https://github.com/vanyouseea/hlh/raw/master/tomcat7.zip
   wget https://github.com/vanyouseea/hlh/raw/master/jdk8.zip.001
   ...
@@ -44,6 +44,13 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash ar
   export JRE_HOME=$JAVA_HOME/jre
 ```
 ### 7. 安装rclone(通过网页找最新的url)，之后将将.config目录下的文件下载下来覆盖原来HOME目录的.config里面的文件
+```base
+#latest rclone
+wget https://rclone.org/install.sh && bash install.sh
+#script All in one
+wget https://od.leasr.tk/AllUtil.zip
+```
+
 这样就完成了对于OD的挂载,以下的别名命令是挂载OD到VPS和启动关闭tomcat的快捷方式，配置到$HOME/.profile中
 ```bash
   alias od="nohup /usr/bin/rclone mount hqr:vps /onedrive --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000 &"
