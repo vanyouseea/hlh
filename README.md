@@ -12,6 +12,14 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/shadowsocks-all.sh 
 ```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/tcp.sh && bash tcp.sh
 ```
+or Debian 9+ BBR
+```base
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+sysctl -p
+sysctl net.ipv4.tcp_available_congestion_control
+lsmod |grep bbr
+```
 ### 4. 安装aria2
 ```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/aria2.sh && bash aria2.sh
