@@ -62,6 +62,11 @@ alias stop="/usr/local/tomcat7/bin/shutdown.sh"
 
 ### 9. 大功告成
 
+### 1. 1~9操作集合到一个shell
+```base
+wget https://raw.githubusercontent.com/vanyouseea/hlh/master/all.sh && bash all.sh
+```
+
 --- 
 # 可选
 
