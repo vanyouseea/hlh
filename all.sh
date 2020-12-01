@@ -53,7 +53,10 @@ echo '安装完成'
 
 echo '获取全局配置文件及脚本'
 wget https://od.leasr.tk/AllUtil.zip
-unzip AllUtil.zip
-chmod -755 *sh
+unzip -o AllUtil.zip
+rm install.sh
+rm tcp.sh
+chmod 755 *sh
 
+echo ""
 echo "配置会在重启后生效(reboot)，Aria2的详细配置可以使用./aria2.sh来具体设置"
