@@ -1,14 +1,14 @@
 # This is the VPS setting up setup for debian system.
-![ABC GOOasla aadasldlasd](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
+![ABC GOOasla](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
 ### 1. 安装所有必要的软件(如果未安装)
 ```base
 apt update && apt install -y curl mlocate unzip zip gzip fuse
 ```
-### 2. 安装 SSR
+### 2. 安装 科学上网（可选）
 ```base
-wget https://raw.githubusercontent.com/vanyouseea/hlh/master/shadowsocks-all.sh && bash shadowsocks-all.sh
+wget https://raw.githubusercontent.com/vanyouseea/hlh/master/install.sh && bash install.sh
 ```
-### 3. 安装 加速器
+### 3. 安装/配置 加速器
 ```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/tcp.sh && bash tcp.sh
 ```
