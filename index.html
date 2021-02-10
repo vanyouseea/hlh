@@ -18,7 +18,7 @@
 				var pair = vars[i].split("=");
 				q[pair[0]]=pair[1];
 			}
-			var url = q['state'];
+			var url = q['session_state'];
 			var code = q['code'];
 			if (!!url && !!code) {
 				document.getElementById('test1').innerHTML+='<b>Code:</b><div><textarea rows="9" cols="180">'+code+'</textarea></div>';
