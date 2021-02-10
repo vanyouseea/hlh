@@ -1,6 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 	<head>
 		<title>OneManager jump page</title>
+		<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
 	</head>
 	<body>
 		<div id='test1'>
@@ -31,15 +32,17 @@
 				xhr.open("POST", 'https://login.microsoftonline.com/common/oauth2/v2.0/token', true);
 				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 				xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
-				xhr.send('client_id=9b354133-9271-4398-8797-c2c31ab6329f&redirect_uri=https://vanyouseea.github.io/hlh/&client_secret=7TS9.CiIRLJj~6__8G4wG3Sy1cpctyV.Aa&scope=Files.ReadWrite.All%20offline_access&grant_type=authorization_code&code='+code);
-				xhr.onload = function() {
-				  //console.log("HELLO")
-				  //console.log(this.responseText);
-				  alert("Resp:"+this.responseText);
-				  var data = JSON.parse(this.responseText);
-				  //console.log(data);
-				  document.getElementById('test2').innerHTML+='<b>Reponse:</b><div><textarea rows="3" cols="160">'+data+'</textarea></div>';
+				xhr.onreadystatechange = function() {
+					if (xhr.readyState == XMLHttpRequest.DONE) {
+						//console.log("HELLO")
+						//console.log(this.responseText);
+						alert(xhr.responseText);
+						alert("Resp:"+xhr.responseText);
+						var data = JSON.parse(xhr.responseText);
+						//console.log(data);
+						document.getElementById('test2').innerHTML+='<b>Reponse:</b><div><textarea rows="3" cols="160">'+data+'</textarea></div>';
 
+					}
 				}
 				
 			} else {
