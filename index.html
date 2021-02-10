@@ -6,10 +6,10 @@
 	<body>
 		<div id='test1'>
 			<a id="direct">No link here!</a><br>
-			Pls see the code here
+			Pls see the code here<br>
 		</div>
 		<div id='test2'>	
-			Pls see refresh token here
+			Pls see refresh token here<br>
 		</div>
 
 		<script>
@@ -29,9 +29,10 @@
 				document.getElementById('test1').innerHTML+='<b>State:</b><div><textarea rows="3" cols="160">'+url+'</textarea></div>';
 
 				var xhr = new XMLHttpRequest();
-				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-				xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 				xhr.open("POST", 'https://login.microsoftonline.com/common/oauth2/v2.0/token', true);
+				xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
 				xhr.send('client_id=9b354133-9271-4398-8797-c2c31ab6329f&redirect_uri=https://vanyouseea.github.io/hlh/&client_secret=7TS9.CiIRLJj~6__8G4wG3Sy1cpctyV.Aa&scope=Files.ReadWrite.All%20offline_access&grant_type=authorization_code&code='+code);
 				xhr.onload = function() {
 				  //console.log("HELLO")
