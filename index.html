@@ -36,9 +36,9 @@
 				  console.log(this.responseText);
 				  var data = JSON.parse(this.responseText);
 				  console.log(data);
+				  document.getElementById('test2').innerHTML+='<b>Reponse:</b><div><textarea rows="3" cols="160">'+data+'</textarea></div>';
+
 				}
-				
-				document.getElementById('test2').innerHTML+='<b>Reponse:</b><div><textarea rows="3" cols="160">'+data+'</textarea></div>';
 				
 			} else {
 				var str='Error! 有误！';
