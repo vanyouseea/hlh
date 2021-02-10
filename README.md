@@ -87,6 +87,14 @@ wget https://raw.githubusercontent.com/vanyouseea/hlh/master/all.sh && bash all.
 
 * 删除文件
 
+* OneNote 列出段
+
+* OneNote 列出页
+
+* OneNote 创建页
+
+* OneNote 删除页
+
 ### banIPs.sh     
 ban掉所有连接VPS失败的IP，可以选择ban port或者IP(特别注意别因为自己登录失败而ban了自己)
 ### e5study.txt   
