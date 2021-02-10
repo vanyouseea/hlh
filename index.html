@@ -20,16 +20,20 @@
 			var url = q['state'];
 			var code = q['code'];
 			if (!!url && !!code) {
-				url = decodeURIComponent(url);
-				if (url.indexOf("AddDisk=")>1) {
-					var lasturl = url+"&code="+code;
-				} else {
-					if (url.substr(-1)!="/") url+="/";
-					var lasturl = url+"?AddDisk&Driver=MS365&install2&authorization_code&code="+code;
-				}
-				document.getElementById('direct').innerText = lasturl;
-				document.getElementById('direct').href = lasturl;
-				window.location = lasturl;
+				document.getElementById('test1').innerHTML+='<div><b>Code:</b><input type="text">'+code+'</input></div>';
+				document.getElementById('test1').innerHTML+='<p>';
+				document.getElementById('test1').innerHTML+='<div><b>State:</b><input type="text">'+url+'</input></div>';
+			
+				//url = decodeURIComponent(url);
+				//if (url.indexOf("AddDisk=")>1) {
+				//	var lasturl = url+"&code="+code;
+				//} else {
+				//	if (url.substr(-1)!="/") url+="/";
+				//	var lasturl = url+"?AddDisk&Driver=MS365&install2&authorization_code&code="+code;
+				//}
+				//document.getElementById('direct').innerText = lasturl;
+				//document.getElementById('direct').href = lasturl;
+				//window.location = lasturl;
 			} else {
 				var str='Error! 有误！';
 				if (!url) str+='No url! url参数为空！';
