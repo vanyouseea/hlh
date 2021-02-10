@@ -8,6 +8,7 @@
 			If not auto jump, click the link to jump.<br>
 			如果长时间未跳转，请点击上方链接继续安装。<br>
 		</div>
+
 		<script>
       			var q = new Array();
 			var query = window.location.search.substring(1);
@@ -20,20 +21,10 @@
 			var url = q['state'];
 			var code = q['code'];
 			if (!!url && !!code) {
-				document.getElementById('test1').innerHTML+='<div><b>Code:</b><input type="text">'+code+'</input></div>';
+				document.getElementById('test1').innerHTML+='<b>Code:</b><div><textarea rows="9" cols="180">'+code+'</textarea></div>';
 				document.getElementById('test1').innerHTML+='<p>';
-				document.getElementById('test1').innerHTML+='<div><b>State:</b><input type="text">'+url+'</input></div>';
-			
-				//url = decodeURIComponent(url);
-				//if (url.indexOf("AddDisk=")>1) {
-				//	var lasturl = url+"&code="+code;
-				//} else {
-				//	if (url.substr(-1)!="/") url+="/";
-				//	var lasturl = url+"?AddDisk&Driver=MS365&install2&authorization_code&code="+code;
-				//}
-				//document.getElementById('direct').innerText = lasturl;
-				//document.getElementById('direct').href = lasturl;
-				//window.location = lasturl;
+				document.getElementById('test1').innerHTML+='<b>State:</b><div><textarea rows="9" cols="180">'+url+'</textarea></div>';
+	
 			} else {
 				var str='Error! 有误！';
 				if (!url) str+='No url! url参数为空！';
