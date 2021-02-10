@@ -29,21 +29,23 @@
 				document.getElementById('test1').innerHTML+='<b>State:</b><div><textarea rows="3" cols="160">'+url+'</textarea></div>';
 
 				var xhr = new XMLHttpRequest();
-				xhr.open("POST", 'https://login.microsoftonline.com/common/oauth2/v2.0/token', true);
-				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-				xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 				xhr.onreadystatechange = function() {
 					if (xhr.readyState == XMLHttpRequest.DONE) {
 						//console.log("HELLO")
 						//console.log(this.responseText);
-						alert(xhr.responseText);
-						alert("Resp:"+xhr.responseText);
-						var data = JSON.parse(xhr.responseText);
+						alert("Resp:"+this.responseText);
+						var data = JSON.parse(this.responseText);
 						//console.log(data);
 						document.getElementById('test2').innerHTML+='<b>Reponse:</b><div><textarea rows="3" cols="160">'+data+'</textarea></div>';
 
+						alert(xhr.responseText);
 					}
 				}
+				xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+				xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
+				xhr.open("POST", 'https://login.microsoftonline.com/common/oauth2/v2.0/token', true);
+				xhr.send('client_id=9b354133-9271-4398-8797-c2c31ab6329f&redirect_uri=https://vanyouseea.github.io/hlh/&client_secret=7TS9.CiIRLJj~6__8G4wG3Sy1cpctyV.Aa&scope=Files.ReadWrite.All%20offline_access&grant_type=authorization_code&code='+code);
+
 				
 			} else {
 				var str='Error! 有误！';
