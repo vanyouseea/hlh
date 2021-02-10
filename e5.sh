@@ -50,3 +50,29 @@ echo "7.2 end to get the item info by itemId"
 echo "8.start to delete the file body.txt"
 curl -XDELETE -H "Authorization: Bearer $accessToken" "https://graph.microsoft.com/v1.0/me/drive/items/$itemId"
 echo "8.end to delete the file body.txt"
+
+
+##########################################
+# OneNote API
+##########################################
+#get the onenote sections
+echo "9.start to get the onenote sections"
+curl -XGET -H "Authorization: Bearer $accessToken" 'https://graph.microsoft.com/v1.0/me/onenote/sections?$select=id,displayName'
+echo "9.end to get the onenote sections"
+
+#get the onenote pages
+echo "10.start to get the onenote pages"
+curl -XGET -H "Authorization: Bearer $accessToken" 'https://graph.microsoft.com/v1.0/me/onenote/pages?$select=id,title'
+echo "10.end to get the onenote pages"
+
+#Create onenote page
+echo "11.start to create onenoete page"
+pageId=`curl -s -XPOST -H 'Content-Type: text/html' -H "Authorization: Bearer $accessToken" -T ~/body.txt 'https://graph.microsoft.com/v1.0/me/onenote/sections/1-59113c3c-2e93-4951-be71-bac8add02ac0/pages'|awk -F',' '{print $2}'|awk -F'"' '{print $4}'`
+echo "11.New Page id is "$pageId
+
+#delete onenote page
+echo "12.start to delete the page by id"
+curl -XDELETE -H "Authorization: Bearer $accessToken" "https://graph.microsoft.com//v1.0/me/onenote/pages/$pageId"
+echo "12.end to delete the page by id"
+
+
