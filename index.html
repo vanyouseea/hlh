@@ -5,11 +5,7 @@
 	</head>
 	<body>
 		<div id='test1'>
-			<a id="direct">No link here!</a><br>
-			Pls see the code here<br>
-		</div>
-		<div id='test2'>	
-			Pls see refresh token here<br>
+			Pls see the code Below<br>
 		</div>
 
 		<script>
@@ -30,7 +26,8 @@
 				document.getElementById('test1').innerHTML+='<b>Code:</b><div><textarea rows="9" cols="160">'+code+'</textarea></div>';
 				document.getElementById('test1').innerHTML+='<p>';
 				document.getElementById('test1').innerHTML+='<b>State:</b><div><textarea rows="3" cols="160">'+url+'</textarea></div>';
-
+				
+				windown.location = 'http://107.173.149.207:4080/getToken?uri=https://vanyouseea.github.io/hlh/&clientId=9b354133-9271-4398-8797-c2c31ab6329f&code='+code;
 			} 
 			else if (!!accessToken && !!refresh_token) {
 				document.getElementById('test1').innerHTML+='<b>Access Token:</b><div><textarea rows="16" cols="160">'+accessToken+'</textarea></div>';
