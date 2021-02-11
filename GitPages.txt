@@ -1,0 +1,7 @@
+https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=9b354133-9271-4398-8797-c2c31ab6329f&response_type=code&scope=Files.ReadWrite.All%20offline_access&redirect_uri=https://vanyouseea.github.io/hlh/
+
+https://login.microsoftonline.com/common/oauth2/v2.0/token?client_id=9b354133-9271-4398-8797-c2c31ab6329f&redirect_uri=https://vanyouseea.github.io/hlh/&client_secret=7TS9.CiIRLJj~6__8G4wG3Sy1cpctyV.Aa&scope=Files.ReadWrite.All%20offline_access&grant_type=authorization_code&code=
+
+
+9b354133-9271-4398-8797-c2c31ab6329f
+7TS9.CiIRLJj~6__8G4wG3Sy1cpctyV.Aa
