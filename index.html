@@ -23,13 +23,21 @@
 			}
 			var url = q['session_state'];
 			var code = q['code'];
+			var accessToken = q['access_token'];
+			var refresh_token = q['refresh_token'];
+			
 			if (!!url && !!code) {
 				document.getElementById('test1').innerHTML+='<b>Code:</b><div><textarea rows="9" cols="160">'+code+'</textarea></div>';
 				document.getElementById('test1').innerHTML+='<p>';
 				document.getElementById('test1').innerHTML+='<b>State:</b><div><textarea rows="3" cols="160">'+url+'</textarea></div>';
 
-				
-			} else {
+			} 
+			else if (!!accessToken && !!refresh_token) {
+				document.getElementById('test1').innerHTML+='<b>Access Token:</b><div><textarea rows="16" cols="160">'+accessToken+'</textarea></div>';
+				document.getElementById('test1').innerHTML+='<p>';
+				document.getElementById('test1').innerHTML+='<b>Refresh Token:</b><div><textarea rows="10" cols="160">'+refresh_token+'</textarea></div>';
+			}
+			else {
 				var str='Error! 有误！';
 				if (!url) str+='No url! url参数为空！';
 				else document.getElementById('test1').innerHTML='<a href="'+decodeURIComponent(decodeURIComponent(url))+'">'+decodeURIComponent(decodeURIComponent(url))+'</a><br>';
