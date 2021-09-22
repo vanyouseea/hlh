@@ -74,7 +74,18 @@ apt install docker-ce
 Debian 10：可以一键安装  
 ```bash
 curl -fsSLo- get.docker.com | /bin/sh
-```  
+```
+
+可选安装项目:
+
+```bash
+docker pull denghongcai/forsaken-mail
+docker run -d -p 25:25 -p 3000:3000 denghongcai/forsaken-mail
+
+docker pull vanyouseea/o365:dev_https
+docker run -d -p 8443:8443 -v /root/o365/data:/data vanyouseea/o365:dev_https
+```
+
 ### 10. 1~8操作集合到一个shell
 ```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/all.sh && bash all.sh
