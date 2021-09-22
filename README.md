@@ -60,9 +60,22 @@ alias stop="/usr/local/tomcat7/bin/shutdown.sh"
 ```
 ### 8. 将upload.sh下载到$HOME/下，修改权限为755，这样aria2下载完成后自动上传文件到OD
 
-### 9. 大功告成
+### 9. 安装docker到debian
 
-### 10. 1~9操作集合到一个shell
+Debian 9: 需要手动安装  
+```bash
+apt update &&
+apt install apt-transport-https ca-certificates curl gnupg2 software-properties-common &&
+curl -fsSL https://download.docker.com/linux/debian/gpg | apt-key add - &&
+add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian $(lsb_release -cs) stable" &&
+apt update &&
+apt install docker-ce
+```
+Debian 10：可以一键安装  
+```bash
+curl -fsSLo- get.docker.com | /bin/sh
+```  
+### 10. 1~8操作集合到一个shell
 ```base
 wget https://raw.githubusercontent.com/vanyouseea/hlh/master/all.sh && bash all.sh
 ```
