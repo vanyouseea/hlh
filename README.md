@@ -129,7 +129,10 @@ call e5 resful API via soapUI
 ### 注册应用
 https://login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=e381aebb-dbbf-4a6f-a9c2-34ebfbdf9424&response_type=code&scope=Files.ReadWrite.All%20Files.ReadWrite.AppFolder%20Files.ReadWrite.Selected%20Mail.ReadWrite%20Mail.Send%20offline_access%20Sites.Read.All%20User.Read&redirect_uri=http://localhost:12345
 
-tentid:48350e78-b3d8-4148-a166-34b602b1d51a
-appid:f8048a1a-06b9-477f-9fe7-ae0e1d5cd082
-pwd:G2zGRO.Q7-7Mxm8fBWef4QxRy0_-x-1l.L
+### Login to 10086 with F12
+use sessionstorage.getAssessor_token get below info:
+session:
+phoneno:
+userId:
+assessorId:
 
